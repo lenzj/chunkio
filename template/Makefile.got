@@ -1,0 +1,39 @@
+;;;
+{
+    "pgotInclude" : [
+        "global.got",
+        "Makefile.src/mk-goLib.got",
+        "Makefile.src/mk-docMain.got",
+        "Makefile.src/mk-mkFile.got",
+        "Makefile.src/mk-lint.got",
+        "Makefile.src/mk-todo.got"
+    ]
+}
+;;;
+.POSIX:
+
+PNAME = chunkio
+
+RTEMPLATE ?= ../repo-template
+
+all: doc mkFile
+
+doc: docMain
+
+cleanDoc: cleanDocMain
+
+.DEFAULT_GOAL := all
+
+.PHONY: all doc cleanDoc
+
+{{template "mk-goLib" .}}
+
+{{template "mk-docMain" .}}
+
+{{template "mk-mkFile" .}}
+
+{{template "mk-lint" .}}
+
+{{template "mk-todo" .}}
+
+# vim:set noet tw=80:
