@@ -7,13 +7,13 @@ accessed or passed to other routines as standard Reader objects.
 
 ## Interface
 
-###Variables
+### Variables
 
 ```text
 var ErrInvalidKey = errors.New("chunkio: invalid key definition")
 ```
 
-###Types
+### Types
 
 ```text
 type Reader struct {
