@@ -1,0 +1,9 @@
+image: alpine/edge
+packages:
+- go
+sources:
+- https://git.sr.ht/~lenzj/chunkio
+tasks:
+- test: |
+    cd chunkio
+    go test
