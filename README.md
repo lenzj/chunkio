@@ -77,7 +77,7 @@ func ExampleUppercase() {
 ## Running the tests
 
 ```
-$ make check
+$ go test
 ```
 
 ## Contributing
